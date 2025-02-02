@@ -5,9 +5,9 @@ def f(n):
         n //= 3
     return s
 mn = []
-for n in range(1,1000):
-    b = f(n)
-    if n % 3 == 0:
+for i in range(1,1000):
+    b = f(i)
+    if i % 3 == 0:
         b = b + b[-2:]
     else:
         su = sum(map(int,list(b)))
@@ -15,6 +15,5 @@ for n in range(1,1000):
     r = int(b, 3)
     if r > 220:
         if r % 2 == 0:
-           mn.append(r)
+            mn.append(r)
 print(min(mn))
-
