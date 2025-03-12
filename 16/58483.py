@@ -1,15 +1,14 @@
 import sys
 sys.setrecursionlimit(10**6)
-
+c = 0
 def f(n):
     if n > 1000000:
         return n
-    else:
+    if n <= 1000000:
         return n + f(2 * n)
 def g(n):
     return f(n)//n
-c = 0
-for i in range(1,10000):
-    if g(i) == g(1000):
+for n in range(1,100000):
+    if g(n) == g(1000):
         c += 1
 print(c)
